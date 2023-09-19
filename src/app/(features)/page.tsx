@@ -1,6 +1,14 @@
 import Image from 'next/image'
 import Homenavbar from '../_components/Header/navbar'
 import Head from 'next/head'
+
+import { Amplify } from 'aws-amplify';
+import '@aws-amplify/ui-react/styles.css';
+
+Amplify.configure({awsExports, ssr: true});
+
+import awsExports from '../../aws-exports';
+
 //import Link from 'next/link';
 export default function Home() {
   return (
